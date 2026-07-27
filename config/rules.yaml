@@ -1,0 +1,4 @@
+service: rlm-secure
+port: 8797
+database:
+  url: sqlite:///data/rlm-secure.sqlite
