@@ -14,6 +14,17 @@ def client():
         yield client
 
 
+class TestHealthzIntegration:
+    """Integration tests for /healthz endpoint (used by KIX orchestrator)."""
+
+    def test_healthz_for_kix(self, client):
+        """Healthz endpoint returns simple OK for KIX probing."""
+        resp = client.get("/healthz")
+        assert resp.status_code == 200
+        data = resp.get_json()
+        assert data["status"] == "ok"
+
+
 class TestValidateIntegration:
     """Integration tests for /validate endpoint with other endpoints."""
 
