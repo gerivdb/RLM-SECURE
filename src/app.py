@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 app = Flask(__name__)
 
-PORT = int(os.environ.get("PORT", 8797))
+PORT = int(os.environ.get("PORT", 8796))
 KIX_BASE_URL = os.environ.get("KIX_BASE_URL", "http://localhost:8800")
 
 
