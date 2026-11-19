@@ -20,7 +20,7 @@ from typing import Any
 @dataclass
 class CausalValidatorConfig:
     """Configuration du composant causal_validator."""
-    endpoint: str = "http://localhost:8795"
+    endpoint: str = "http://localhost:8798"
     timeout_seconds: int = 10
 
 
@@ -32,7 +32,7 @@ class CausalValidator:
 
     def health(self) -> dict[str, Any]:
         """Verifie la disponibilite du composant."""
-        return {"status": "ok", "endpoint": self.config.endpoint}
+        raise NotImplementedError("STUB_NON_IMPLÉMENTÉ : Ce service doit être développé avant utilisation.")
 
 
 def build_causal_validator(config: CausalValidatorConfig | None = None) -> CausalValidator:
