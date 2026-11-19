@@ -42,7 +42,7 @@ def main() -> int:
     print("[CI] KIX is healthy")
 
     # 2. Start RLM-SECURE runner
-    print("[CI] Starting RLM-SECURE on port 8797...")
+    print("[CI] Starting RLM-SECURE on port 8798...")
     secure_proc = subprocess.Popen(
         [sys.executable, "src/app.py"],
         cwd="D:/DO/WEB/TOOLS/L2-PLATFORM/RLM-SECURE",
@@ -50,7 +50,7 @@ def main() -> int:
         stderr=subprocess.PIPE,
     )
 
-    if not wait_for_port(8797):
+    if not wait_for_port(8798):
         print("[CI] ERROR: RLM-SECURE failed to start")
         return 1
 

@@ -2,7 +2,7 @@
 
 Security validation service for the RLM ecosystem.
 
-- Port: `8797`
+- Port: `8796`
 - Role: security pattern validation, PES
 - Stack: Flask + SQLite (future state persistence)
 
